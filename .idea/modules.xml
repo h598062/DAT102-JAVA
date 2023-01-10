@@ -3,6 +3,22 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/uke2/uke2.iml" filepath="$PROJECT_DIR$/uke2/uke2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/dat102.iml" filepath="$PROJECT_DIR$/../dat102/dat102.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/Bag/Bag.iml" filepath="$PROJECT_DIR$/../dat102/Bag/Bag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/Bag2/Bag2.iml" filepath="$PROJECT_DIR$/../dat102/Bag2/Bag2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/DobbelKjedetListeU/DobbelKjedetListeU.iml" filepath="$PROJECT_DIR$/../dat102/DobbelKjedetListeU/DobbelKjedetListeU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/EnumArbeidsdag/EnumArbeidsdag.iml" filepath="$PROJECT_DIR$/../dat102/EnumArbeidsdag/EnumArbeidsdag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/EnumSjanger/EnumSjanger.iml" filepath="$PROJECT_DIR$/../dat102/EnumSjanger/EnumSjanger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/Generisk/Generisk.iml" filepath="$PROJECT_DIR$/../dat102/Generisk/Generisk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/Kalkulator/Kalkulator.iml" filepath="$PROJECT_DIR$/../dat102/Kalkulator/Kalkulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/Karakter/Karakter.iml" filepath="$PROJECT_DIR$/../dat102/Karakter/Karakter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/KoeT/KoeT.iml" filepath="$PROJECT_DIR$/../dat102/KoeT/KoeT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/LabyrintUtenRekursjon/LabyrintUtenRekursjon.iml" filepath="$PROJECT_DIR$/../dat102/LabyrintUtenRekursjon/LabyrintUtenRekursjon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/ListeOrdnetU/ListeOrdnetU.iml" filepath="$PROJECT_DIR$/../dat102/ListeOrdnetU/ListeOrdnetU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/MengdeU/MengdeU.iml" filepath="$PROJECT_DIR$/../dat102/MengdeU/MengdeU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/SorteringOgSoekingFyllUt/SorteringOgSoekingFyllUt.iml" filepath="$PROJECT_DIR$/../dat102/SorteringOgSoekingFyllUt/SorteringOgSoekingFyllUt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/Stabel/Stabel.iml" filepath="$PROJECT_DIR$/../dat102/Stabel/Stabel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/TabelHaugU/TabelHaugU.iml" filepath="$PROJECT_DIR$/../dat102/TabelHaugU/TabelHaugU.iml" />
     </modules>
   </component>
 </project>
