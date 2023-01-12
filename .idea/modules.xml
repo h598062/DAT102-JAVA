@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/uke2/uke2.iml" filepath="$PROJECT_DIR$/uke2/uke2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../dat102/dat102.iml" filepath="$PROJECT_DIR$/../dat102/dat102.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/Bag/Bag.iml" filepath="$PROJECT_DIR$/../dat102/Bag/Bag.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/Bag2/Bag2.iml" filepath="$PROJECT_DIR$/../dat102/Bag2/Bag2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/DobbelKjedetListeU/DobbelKjedetListeU.iml" filepath="$PROJECT_DIR$/../dat102/DobbelKjedetListeU/DobbelKjedetListeU.iml" />
@@ -19,6 +17,9 @@
       <module fileurl="file://$PROJECT_DIR$/../dat102/SorteringOgSoekingFyllUt/SorteringOgSoekingFyllUt.iml" filepath="$PROJECT_DIR$/../dat102/SorteringOgSoekingFyllUt/SorteringOgSoekingFyllUt.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/Stabel/Stabel.iml" filepath="$PROJECT_DIR$/../dat102/Stabel/Stabel.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/TabelHaugU/TabelHaugU.iml" filepath="$PROJECT_DIR$/../dat102/TabelHaugU/TabelHaugU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102/dat102.iml" filepath="$PROJECT_DIR$/../dat102/dat102.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke2/uke2.iml" filepath="$PROJECT_DIR$/uke2/uke2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke3/uke3.iml" filepath="$PROJECT_DIR$/uke3/uke3.iml" />
     </modules>
   </component>
 </project>
