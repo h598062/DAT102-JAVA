@@ -20,6 +20,9 @@
       <module fileurl="file://$PROJECT_DIR$/../dat102/dat102.iml" filepath="$PROJECT_DIR$/../dat102/dat102.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke2/uke2.iml" filepath="$PROJECT_DIR$/uke2/uke2.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke3/uke3.iml" filepath="$PROJECT_DIR$/uke3/uke3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DAT102-Oblig1/DAT102-Oblig1.iml" filepath="$PROJECT_DIR$/../DAT102-Oblig1/DAT102-Oblig1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DAT102-Oblig1/oblig1-oppg1/oblig1-oppg1.iml" filepath="$PROJECT_DIR$/../DAT102-Oblig1/oblig1-oppg1/oblig1-oppg1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DAT102-Oblig1/oblig1-oppg2/oblig1-oppg2.iml" filepath="$PROJECT_DIR$/../DAT102-Oblig1/oblig1-oppg2/oblig1-oppg2.iml" />
     </modules>
   </component>
 </project>
