@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../dat102/Bag/Bag.iml" filepath="$PROJECT_DIR$/../dat102/Bag/Bag.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/Bag2/Bag2.iml" filepath="$PROJECT_DIR$/../dat102/Bag2/Bag2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../DAT102-Oblig1/DAT102-Oblig1.iml" filepath="$PROJECT_DIR$/../DAT102-Oblig1/DAT102-Oblig1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/DAT102-Oblig1.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/DAT102-Oblig1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/DobbelKjedetListeU/DobbelKjedetListeU.iml" filepath="$PROJECT_DIR$/../dat102/DobbelKjedetListeU/DobbelKjedetListeU.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/EnumArbeidsdag/EnumArbeidsdag.iml" filepath="$PROJECT_DIR$/../dat102/EnumArbeidsdag/EnumArbeidsdag.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/EnumSjanger/EnumSjanger.iml" filepath="$PROJECT_DIR$/../dat102/EnumSjanger/EnumSjanger.iml" />
@@ -20,12 +20,13 @@
       <module fileurl="file://$PROJECT_DIR$/../dat102/Stabel/Stabel.iml" filepath="$PROJECT_DIR$/../dat102/Stabel/Stabel.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/TabelHaugU/TabelHaugU.iml" filepath="$PROJECT_DIR$/../dat102/TabelHaugU/TabelHaugU.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102/dat102.iml" filepath="$PROJECT_DIR$/../dat102/dat102.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../DAT102-Oblig1/oblig1-oppg1/oblig1-oppg1.iml" filepath="$PROJECT_DIR$/../DAT102-Oblig1/oblig1-oppg1/oblig1-oppg1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../DAT102-Oblig1/oblig1-oppg2/oblig1-oppg2.iml" filepath="$PROJECT_DIR$/../DAT102-Oblig1/oblig1-oppg2/oblig1-oppg2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg1/oblig1-oppg1.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg1/oblig1-oppg1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg2/oblig1-oppg2.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg2/oblig1-oppg2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg3/oblig1-oppg3.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg3/oblig1-oppg3.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg4/oblig1-oppg4.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg4/oblig1-oppg4.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke2/uke2.iml" filepath="$PROJECT_DIR$/uke2/uke2.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke3/uke3.iml" filepath="$PROJECT_DIR$/uke3/uke3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke4/uke4.iml" filepath="$PROJECT_DIR$/uke4/uke4.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke5/uke5.iml" filepath="$PROJECT_DIR$/uke5/uke5.iml" />
     </modules>
   </component>
