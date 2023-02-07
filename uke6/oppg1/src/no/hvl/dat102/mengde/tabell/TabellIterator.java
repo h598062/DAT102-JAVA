@@ -10,9 +10,9 @@ import java.util.NoSuchElementException;
  * @param <T> Elementtype som skal lagres
  */
 public class TabellIterator<T> implements Iterator<T> {
-	private int antall; // antall elementer i mengden
+	private final T[] elementer;
+	private final int antall; // antall elementer i mengden
 	private int pos; // posisjonen til aktuelt element
-	private T[] elementer;
 
 	/**
 	 * Konstruktør for å opprette TabellIterator

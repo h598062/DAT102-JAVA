@@ -38,7 +38,7 @@ public class Ordliste4 {
 		// for-løkke med iterator
 		System.out.println();
 
-		for (Iterator i = ordListeBegge.iterator(); i.hasNext(); ) {
+		for (Iterator<String> i = ordListeBegge.iterator(); i.hasNext(); ) {
 			System.out.println(i.next());
 		}
 

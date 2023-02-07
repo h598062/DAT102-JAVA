@@ -34,7 +34,7 @@ public interface MengdeADT<T> extends Iterable<T> {
 	 *
 	 * @return elementet som fjernes
 	 *
-	 * @throws EmptyCollectionException når stabelen er tom
+	 * @throws EmptyCollectionException når mengden er tom
 	 */
 	T fjern(T element);
 
@@ -78,14 +78,14 @@ public interface MengdeADT<T> extends Iterable<T> {
 	/**
 	 * @param m2 er parameteren
 	 *
-	 * @return returnerer en ny mende som er snittet av denne mengden (this) og parameteren
+	 * @return returnerer en ny mengde som er snittet av denne mengden (this) og parameteren
 	 */
 	MengdeADT<T> snitt(MengdeADT<T> m2);
 
 	/**
 	 * @param m2 er parameteren
 	 *
-	 * @return returnerer en ny mende som er diffrensen av denne mengden (this) og parameteren
+	 * @return returnerer en ny mengde som er diffrensen av denne mengden (this) og parameteren
 	 */
 	MengdeADT<T> differens(MengdeADT<T> m2);
 

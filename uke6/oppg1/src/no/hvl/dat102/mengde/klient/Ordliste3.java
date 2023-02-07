@@ -2,6 +2,7 @@ package no.hvl.dat102.mengde.klient;
 
 import no.hvl.dat102.mengde.adt.MengdeADT;
 import no.hvl.dat102.mengde.kjedet.KjedetMengde;
+import no.hvl.dat102.mengde.tabell.TabellMengde;
 
 /**
  * Skriver ut union av to ordlister
@@ -10,7 +11,7 @@ public class Ordliste3 {
 
 	public static void main(String[] args) {
 
-		MengdeADT<String> ordListe1 = new KjedetMengde<>();
+		MengdeADT<String> ordListe1 = new TabellMengde<>();
 
 		String[] ord1 = {"God", "dag", "Hans", "Hansen", "Hansaby", "Olsen", "Ole", "buss", "rute", "Bergen"};
 

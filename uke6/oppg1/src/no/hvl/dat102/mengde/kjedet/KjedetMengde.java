@@ -12,7 +12,7 @@ import java.util.Random;
  * @param <T> Elementtype som skal lagres
  */
 public class KjedetMengde<T> implements MengdeADT<T> {
-	private static Random rand = new Random();
+	private static final Random rand = new Random();
 	private int antall; // antall elementer i mengden
 	private LinearNode<T> start;
 
@@ -22,7 +22,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	public KjedetMengde() {
 		antall = 0;
 		start = null;
-	}//
+	}
 
 	@Override
 	public void leggTil(T element) {
@@ -36,9 +36,8 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public void leggTilAlle(MengdeADT<T> m2) {
-		Iterator<T> teller = m2.iterator();
-		while (teller.hasNext()) {
-			this.leggTil(teller.next());
+		for (T element : m2) {
+			this.leggTil(element);
 		}
 	}
 
@@ -47,7 +46,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		if (erTom()) {throw new EmptyCollectionException("mengde");}
 
 		LinearNode<T> forgjenger, aktuell;
-		T resultat = null;
+		T resultat;
 
 		int valg = rand.nextInt(antall) + 1;
 		if (valg == 1) {
@@ -162,53 +161,55 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 
 
 	@Override
-	public MengdeADT<T> union(MengdeADT<T> m2
-	) { // Denne ersattes med en mer effektiv union, se kladdeoppgavenr3
-		KjedetMengde<T> begge = new KjedetMengde<>();
-		LinearNode<T> aktuell = start;
-		while (aktuell != null) {
-			begge.leggTil(aktuell.getElement());
-			aktuell = aktuell.getNeste();   // this-mengden
-		}// while
-		Iterator<T> teller = m2.iterator();
-		while (teller.hasNext()) {
-			begge.leggTil(teller.next());
+	public MengdeADT<T> union(MengdeADT<T> m2) {
+		// alt i mengde 1 + alt i mengde 2
+		// Denne ersattes med en mer effektiv union, se kladdeoppgavenr3
+		MengdeADT<T> begge = new KjedetMengde<>();
+		for (T element : this) {
+			begge.leggTil(element);
+		}
+		for (T element : m2) {
+			begge.leggTil(element);
 		}
 		return begge;
-	}//
+	}
 
 	@Override
 	public MengdeADT<T> snitt(MengdeADT<T> m2) {
-		// TODO
+		// snitt = det som er felles mellom begge
 		MengdeADT<T> snittM = new KjedetMengde<>();
-		T element;
-		/*
-		 * Fyll ut senere
-		 *
-		 * if (this.inneholder(element)) ((KjedetMengde<T>) snittM).settInn(element);
-		 */
+		for (T element : m2) {
+			if (this.inneholder(element)) {
+				snittM.leggTil(element);
+			}
+		}
 		return snittM;
 	}
 
 	@Override
 	public MengdeADT<T> differens(MengdeADT<T> m2) {
-		// TODO
+		// returnere det som er i denne mengden (this) men ikke i parameter mengde m2
 		MengdeADT<T> differensM = new KjedetMengde<>();
-		T element;
-		/*
-		 * Fyll ut senere
-		 *
-		 */
-
+		for (T element : this) {
+			if (!m2.inneholder(element)) {
+				differensM.leggTil(element);
+			}
+		}
 		return differensM;
 	}
 
 	@Override
 	public boolean undermengde(MengdeADT<T> m2) {
-		// TODO
-		boolean erUnderMengde = true;
-		// ... Fyll ut senere
-		return erUnderMengde;
+		// kan ikke være undermengde (delmengde) hvis denne mengden er mindre
+		if (this.antall < m2.antall()) return false;
+		// hvis count blir lik antall i m2 så har vår mengde (this) alle elementer som er i m2
+		int count = 0;
+		for (T element : m2) {
+			if (this.inneholder(element)) {
+				count++;
+			}
+		}
+		return count == m2.antall();
 	}
 
 	@Override
@@ -216,6 +217,11 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		return new KjedetIterator<>(start);
 	}
 
+	/**
+	 * Legger til element uten å sjekke om det allerede finnes i mengde
+	 *
+	 * @param element element som skal legges til
+	 */
 	private void settInn(T element) {
 		LinearNode<T> nyNode = new LinearNode<>(element);
 		nyNode.setNeste(start);

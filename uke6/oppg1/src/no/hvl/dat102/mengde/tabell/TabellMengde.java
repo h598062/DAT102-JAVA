@@ -50,8 +50,9 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public void leggTilAlle(MengdeADT<T> m2) {
-		Iterator<T> teller = m2.iterator();
-		while (teller.hasNext()) {leggTil(teller.next());}
+		for (T t : m2) {
+			leggTil(t);
+		}
 	}
 
 	private void utvidKapasitet() {
@@ -99,13 +100,13 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public boolean inneholder(T element) {
-		boolean funnet = false;
-		for (int i = 0; i < antall && !funnet; i++) {
-			if (tab[i].equals(element)) {
-				funnet = true;
+		if (element == null) return false;
+		for (T elem : this) {
+			if (elem.equals(element)) {
+				return true;
 			}
 		}
-		return (funnet);
+		return false;
 	}
 
 	@Override
@@ -145,48 +146,53 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	}
 
 	@Override
-	public MengdeADT<T> union(MengdeADT<T> m2
-	) { // Denne metoden erstattes med en mer effektiv, se KladdeoppgaveNr3
-		TabellMengde<T> begge = new TabellMengde<>();
-		for (int i = 0; i < antall; i++) {
-			begge.leggTil(tab[i]);
+	public MengdeADT<T> union(MengdeADT<T> m2) {
+		// Denne ersattes med en mer effektiv union, se kladdeoppgavenr3
+		MengdeADT<T> begge = new TabellMengde<>();
+		for (T element : this) {
+			begge.leggTil(element);
 		}
-		Iterator<T> teller = m2.iterator();
-
-		while (teller.hasNext()) {
-			begge.leggTil(teller.next());
+		for (T element : m2) {
+			begge.leggTil(element);
 		}
-		return (MengdeADT<T>) begge;
+		return begge;
 	}
 
 	@Override
 	public MengdeADT<T> snitt(MengdeADT<T> m2) {
 		MengdeADT<T> snittM = new TabellMengde<>();
-		T element = null;
-		/*
-		 * ...Fyll ut senere
-		 */
+		for (T element : m2) {
+			if (this.inneholder(element)) {
+				snittM.leggTil(element);
+			}
+		}
 		return snittM;
 	}
 
 	@Override
 	public MengdeADT<T> differens(MengdeADT<T> m2) {
+		// returnere det som er i denne mengden (this) men ikke i parameter mengde m2
 		MengdeADT<T> differensM = new TabellMengde<>();
-		T element;
-		/*
-		 * Fyll ut senere
-		 *
-		 * if (!m2.inneholder(element)) ((TabellMengde<T>) differensM).settInn(element);
-		 */
-
+		for (T element : this) {
+			if (!m2.inneholder(element)) {
+				differensM.leggTil(element);
+			}
+		}
 		return differensM;
 	}
 
 	@Override
 	public boolean undermengde(MengdeADT<T> m2) {
-		boolean erUnderMengde = true;
-		// ...Fyll ut senere
-		return false;
+		// kan ikke være undermengde (delmengde) hvis denne mengden er mindre
+		if (this.antall < m2.antall()) return false;
+		// hvis count blir lik antall i m2 så har vår mengde (this) alle elementer som er i m2
+		int count = 0;
+		for (T element : m2) {
+			if (this.inneholder(element)) {
+				count++;
+			}
+		}
+		return count == m2.antall();
 	}
 
 	@Override
@@ -195,7 +201,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	}
 
 	/**
-	 * Akkurat det samme som leggTil???
+	 * Legger til element uten å sjekke om det allerede finnes i mengde
 	 *
 	 * @param element element som skal legges til
 	 */

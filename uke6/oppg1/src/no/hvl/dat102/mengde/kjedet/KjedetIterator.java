@@ -37,7 +37,6 @@ public class KjedetIterator<T> implements Iterator<T> {
 	/*************************************************************
 	 * Returnerer neste element hvis det fins.
 	 *************************************************************/
-
 	@Override
 	public T next() {
 		if (!hasNext()) {throw new NoSuchElementException();}
