@@ -3,6 +3,9 @@ package no.hvl.dat102.mengde.klient;
 import no.hvl.dat102.mengde.adt.MengdeADT;
 import no.hvl.dat102.mengde.kjedet.KjedetMengde;
 
+/**
+ * Skriver ut union av to ordlister
+ */
 public class Ordliste3 {
 
 	public static void main(String[] args) {
@@ -13,21 +16,18 @@ public class Ordliste3 {
 
 		String[] ord2 = {"God", "Hei", "Eva", "Oslo", "Foerde", "Olsen",};
 
-		for (int i = 0; i < ord1.length; i++) {
-			ordListe1.leggTil(ord1[i]);
+		for (String s : ord1) {
+			ordListe1.leggTil(s);
 		}
-		int ant = ordListe1.antall();
 
 		MengdeADT<String> ordListe2 = new KjedetMengde<>();
 
-		for (int i = 0; i < ord2.length; i++) {
-			ordListe2.leggTil(ord2[i]);
+		for (String s : ord2) {
+			ordListe2.leggTil(s);
 		}
 
 		// Lager unionen av de to ordlistene
-		MengdeADT<String> ordListeBegge = new KjedetMengde<>();
-
-		ordListeBegge = ordListe1.union(ordListe2);
+		MengdeADT<String> ordListeBegge = ordListe1.union(ordListe2);
 
 		System.out.println("Utskrift av unionen av begge ordlistene");
 		String hentStreng = "";

@@ -7,9 +7,12 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Random;
 
+/**
+ * ADT-en Mengde implementert som tabell
+ *
+ * @param <T> Elementtype som skal lagres
+ */
 public class TabellMengde<T> implements MengdeADT<T> {
-	// ADT-en Mengde implementert som tabell
-	//
 	private static final Random tilf = new Random();
 	private static final int STDK = 100;
 	private int antall;
@@ -63,9 +66,8 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	public T fjernTilfeldig() {
 		if (erTom()) {throw new EmptyCollectionException("mengde");}
 
-		T svar = null;
 		int indeks = tilf.nextInt(antall);
-		svar = tab[indeks];
+		T svar = tab[indeks];
 		tab[indeks] = tab[antall - 1];
 		tab[antall - 1] = null;
 		antall--;
@@ -98,7 +100,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	@Override
 	public boolean inneholder(T element) {
 		boolean funnet = false;
-		for (int i = 0; (i < antall) && (!funnet); i++) {
+		for (int i = 0; i < antall && !funnet; i++) {
 			if (tab[i].equals(element)) {
 				funnet = true;
 			}
@@ -106,11 +108,6 @@ public class TabellMengde<T> implements MengdeADT<T> {
 		return (funnet);
 	}
 
-	/*
-	 * Når vi overkjører (override) equals- meteoden er det anbefalt at vi også
-	 * overkjører hashcode-metoden da en del biblioteker bruker hashcode sammen med
-	 * equals. Vi kommer tilbake til forklaring og bruk av hashcode senere i faget.
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -150,7 +147,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 	@Override
 	public MengdeADT<T> union(MengdeADT<T> m2
 	) { // Denne metoden erstattes med en mer effektiv, se KladdeoppgaveNr3
-		TabellMengde<T> begge = new TabellMengde<T>();
+		TabellMengde<T> begge = new TabellMengde<>();
 		for (int i = 0; i < antall; i++) {
 			begge.leggTil(tab[i]);
 		}
@@ -197,7 +194,12 @@ public class TabellMengde<T> implements MengdeADT<T> {
 		return new TabellIterator<>(tab, antall);
 	}
 
-	private void settInn(T element) {// hjelpemetode
+	/**
+	 * Akkurat det samme som leggTil???
+	 *
+	 * @param element element som skal legges til
+	 */
+	private void settInn(T element) {
 		if (antall == tab.length) {
 			utvidKapasitet();
 		}
@@ -205,4 +207,4 @@ public class TabellMengde<T> implements MengdeADT<T> {
 		antall++;
 	}
 
-}// class
+}

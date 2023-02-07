@@ -10,16 +10,17 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * @author ole olsen
+ * Representerer en iterator for en kjedet struktur av noder kjedet lineært.
+ *
+ * @param <T> Elementtype som skal lagres
  */
 public class KjedetIterator<T> implements Iterator<T> {
 	private LinearNode<T> aktuell; // den aktuelle posisjonen.
 
-	/*************************************************************
-	 * Lager en iterator (oppramsar)..
-	 *************************************************************/
 	/**
-	 * @param samling
+	 * Lager en iterator (oppramsar)
+	 *
+	 * @param samling samling
 	 */
 	public KjedetIterator(LinearNode<T> samling) {
 		aktuell = samling;
@@ -39,9 +40,8 @@ public class KjedetIterator<T> implements Iterator<T> {
 
 	@Override
 	public T next() {
-		T resultat = null;
 		if (!hasNext()) {throw new NoSuchElementException();}
-		resultat = aktuell.getElement();
+		T resultat = aktuell.getElement();
 		aktuell = aktuell.getNeste();
 		return resultat;
 	}

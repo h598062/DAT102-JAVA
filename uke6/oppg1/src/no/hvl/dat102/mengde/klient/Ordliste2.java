@@ -5,11 +5,10 @@ import no.hvl.dat102.mengde.kjedet.KjedetMengde;
 
 import java.util.Scanner;
 
+/**
+ * Skriv inn noen ord via console så blir de sammenlignet med ordlisten
+ */
 public class Ordliste2 {
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 
 		MengdeADT<String> ordListe1 = new KjedetMengde<>();
@@ -30,8 +29,8 @@ public class Ordliste2 {
 		Scanner tastatur = new Scanner(System.in);
 		// Legger til ordene i mengden ordListe1
 
-		for (int i = 0; i < ord.length; i++) {
-			ordListe1.leggTil(ord[i]);
+		for (String s : ord) {
+			ordListe1.leggTil(s);
 		}
 		MengdeADT<String> ordListe2 = new KjedetMengde<>();
 
@@ -51,12 +50,10 @@ public class Ordliste2 {
 			System.out.print("Oppgi en streng, avslutt med zzz :");
 			streng = tastatur.nextLine();
 
-		} // while
+		}
 
 		// Lager unionen av de to ordlistene
-		MengdeADT<String> ordListeBegge = new KjedetMengde<>();
-
-		ordListeBegge = ordListe1.union(ordListe2);
+		MengdeADT<String> ordListeBegge = ordListe1.union(ordListe2);
 
 		System.out.println("Utskrift av unionen av begge ordlistene");
 		String hentStreng = "";
@@ -67,9 +64,7 @@ public class Ordliste2 {
 		}
 
 		// Lager snittet av de to ordlistene
-		MengdeADT<String> ordListeFelles = new KjedetMengde<>();
-
-		ordListeFelles = ordListe1.snitt(ordListe2);
+		MengdeADT<String> ordListeFelles = ordListe1.snitt(ordListe2);
 
 		System.out.println("Utskrift av snittet av begge ordlistene");
 		hentStreng = "";
@@ -80,9 +75,7 @@ public class Ordliste2 {
 		}
 
 		// Lager differansen av de to ordlistene
-		MengdeADT<String> ordListeDiff = new KjedetMengde<>();
-
-		ordListeDiff = ordListe1.differens(ordListe2);
+		MengdeADT<String> ordListeDiff = ordListe1.differens(ordListe2);
 
 		System.out.println("Utskrift av differensen av begge ordlistene");
 		hentStreng = "";
@@ -93,5 +86,4 @@ public class Ordliste2 {
 		}
 
 	}
-
 }

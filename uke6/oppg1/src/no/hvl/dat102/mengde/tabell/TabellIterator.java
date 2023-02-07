@@ -3,15 +3,23 @@ package no.hvl.dat102.mengde.tabell;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * Klasse som kan brukes til å gå gjennom alle elementer i et objekt av klasse Mengde når denne klassen Mengde
+ * er implementert vha tabell.
+ *
+ * @param <T> Elementtype som skal lagres
+ */
 public class TabellIterator<T> implements Iterator<T> {
-	// Klasse som kan brukes til å gå gjennom alle elementer
-	// i et objekt av klasse Mengde når denne klassen Mengde er
-	// implementert vha tabell.
-	//
 	private int antall; // antall elementer i mengden
 	private int pos; // posisjonen til aktuelt element
 	private T[] elementer;
 
+	/**
+	 * Konstruktør for å opprette TabellIterator
+	 *
+	 * @param tab    tabell som skal få iterator
+	 * @param lengde lengde på iterator / tabell
+	 */
 	public TabellIterator(T[] tab, int lengde) {
 		// Gi startverdier til iteratoren
 		elementer = tab;

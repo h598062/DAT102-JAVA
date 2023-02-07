@@ -1,15 +1,16 @@
 package no.hvl.dat102.mengde.kjedet;
 
-//********************************************************************
-// Kjedet implementasjon av en mengde. 
-//********************************************************************
-
 import no.hvl.dat102.exception.EmptyCollectionException;
 import no.hvl.dat102.mengde.adt.MengdeADT;
 
 import java.util.Iterator;
 import java.util.Random;
 
+/**
+ * Kjedet implementasjon av en mengde.
+ *
+ * @param <T> Elementtype som skal lagres
+ */
 public class KjedetMengde<T> implements MengdeADT<T> {
 	private static Random rand = new Random();
 	private int antall; // antall elementer i mengden
@@ -68,7 +69,7 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 	}//
 
 	@Override
-	public T fjern(T element) { // Denne skal vi se på litt senere
+	public T fjern(T element) {
 
 		if (erTom()) {throw new EmptyCollectionException("mengde");}
 
@@ -111,11 +112,6 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		}
 		return funnet;
 	}
-	/*
-	 * Når vi overkjører (override) equals- meteoden er det anbefalt at vi også
-	 * overkjører hashcode-metoden da en del biblioteker bruker hascode sammen med
-	 * equals. Vi kommer tilbake til forklaring og bruk av hashcode senere i faget.
-	 */
 
 	@Override
 	public int hashCode() {
@@ -220,11 +216,11 @@ public class KjedetMengde<T> implements MengdeADT<T> {
 		return new KjedetIterator<>(start);
 	}
 
-	private void settInn(T element) { // Hjelpemetode
+	private void settInn(T element) {
 		LinearNode<T> nyNode = new LinearNode<>(element);
 		nyNode.setNeste(start);
 		start = nyNode;
 		antall++;
 	}
 
-}// class
+}

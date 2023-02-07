@@ -5,6 +5,9 @@ import no.hvl.dat102.mengde.kjedet.KjedetMengde;
 
 import java.util.Iterator;
 
+/**
+ * Union av to ordlister + demonstrasjon av iterator vs utvidet for-løkke
+ */
 public class Ordliste4 {
 	public static void main(String[] args) {
 
@@ -14,21 +17,18 @@ public class Ordliste4 {
 
 		String[] ord2 = {"God", "Hei", "Eva", "Oslo", "Førde", "Olsen",};
 
-		for (int i = 0; i < ord1.length; i++) {
-			ordListe1.leggTil(ord1[i]);
+		for (String s : ord1) {
+			ordListe1.leggTil(s);
 		}
-		int ant = ordListe1.antall();
 
 		MengdeADT<String> ordListe2 = new KjedetMengde<>();
 
-		for (int i = 0; i < ord2.length; i++) {
-			ordListe2.leggTil(ord2[i]);
+		for (String s : ord2) {
+			ordListe2.leggTil(s);
 		}
 
 		// Lager unionen av de to ordlistene
-		MengdeADT<String> ordListeBegge = new KjedetMengde<>();
-
-		ordListeBegge = ordListe1.union(ordListe2);
+		MengdeADT<String> ordListeBegge = ordListe1.union(ordListe2);
 		// https://www.geeksforgeeks.org/iterator-vs-foreach-in-java/
 		// for-each-løkke
 

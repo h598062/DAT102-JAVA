@@ -2,9 +2,8 @@ package no.hvl.dat102.mengde.klient;
 
 public class Bingokule {
 	// Til å representer 'bingo-verdier' B10, N43, ... osv
-	//
-	private char bokstav;
-	private int tall;
+	private final char bokstav;
+	private final int tall;
 
 	/**
 	 * Konstruktør
@@ -24,12 +23,6 @@ public class Bingokule {
 		} else {bokstav = 'O';}
 	}
 
-	/**
-	 * Tester om to bingokuler er like
-	 *
-	 * @param k2 bingokule
-	 **/
-	// hashCode er tema senere.
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -51,15 +44,12 @@ public class Bingokule {
 			return false;
 		}
 
-		Bingokule b2 = (Bingokule) ny; // Nødvendig typekonvertering
+		Bingokule b2 = (Bingokule) ny;
 		return (tall == b2.tall && bokstav == b2.bokstav);
 	}
 
-	/**
-	 * Strengrepresentasjon av bingokule
-	 */
 	@Override
 	public String toString() {
 		return bokstav + " " + tall;
 	}
-}// class
+}
