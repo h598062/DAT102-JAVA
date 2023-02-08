@@ -147,19 +147,26 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
 	@Override
 	public MengdeADT<T> union(MengdeADT<T> m2) {
-		// Denne ersattes med en mer effektiv union, se kladdeoppgavenr3
-		MengdeADT<T> begge = new TabellMengde<>();
+		// alt i mengde 1 + alt i mengde 2
+		TabellMengde<T> begge = new TabellMengde<>();
 		for (T element : this) {
-			begge.leggTil(element);
+			// bruk settInn, siden vi vet at alle elementer fra denne mengden er unike
+			begge.settInn(element);
 		}
 		for (T element : m2) {
-			begge.leggTil(element);
+			// bruk settInn og inneholder, bare at inneholder sjekker mot denne istedenfor begge
+			// da blir ikke inneholder sjekk i leggTil kjørt, og den vil ta lengre tid for hvert element
+			// vi legger inn i begge
+			if (!this.inneholder(element)) {
+				begge.settInn(element);
+			}
 		}
 		return begge;
 	}
 
 	@Override
 	public MengdeADT<T> snitt(MengdeADT<T> m2) {
+		// snitt = det som er felles mellom begge
 		MengdeADT<T> snittM = new TabellMengde<>();
 		for (T element : m2) {
 			if (this.inneholder(element)) {
