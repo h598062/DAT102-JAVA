@@ -41,7 +41,8 @@ public class Oppgave1 {
 	}
 
 	/**
-	 * Flytter minste element i tabellen til indeks 0, deretter gjør en sortering
+	 * Flytter minste element i tabellen til indeks 0, deretter gjør en sortering<br>
+	 * Oppgave a
 	 * @param a Tabellen som skal jobbes med
 	 * @param n Hvor mange elementer som skal tas med ved sortering i tabellen
 	 * @param <T> Hvilken som helst type element som utvider Comparable klassen
