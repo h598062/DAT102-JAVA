@@ -33,14 +33,20 @@
       <module fileurl="file://$PROJECT_DIR$/../dat102-oblig2/oblig2-oppg5/oblig2-oppg5.iml" filepath="$PROJECT_DIR$/../dat102-oblig2/oblig2-oppg5/oblig2-oppg5.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102-oblig2/oblig2-oppg6/oblig2-oppg6.iml" filepath="$PROJECT_DIR$/../dat102-oblig2/oblig2-oppg6/oblig2-oppg6.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke10/uke10.iml" filepath="$PROJECT_DIR$/uke10/uke10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke10/F15 - Rekursiv Fletting/F15 - Rekursiv Fletting.iml" filepath="$PROJECT_DIR$/uke10/F15 - Rekursiv Fletting/F15 - Rekursiv Fletting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke10/F16 - Søking/F16 - Søking.iml" filepath="$PROJECT_DIR$/uke10/F16 - Søking/F16 - Søking.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke2/uke2.iml" filepath="$PROJECT_DIR$/uke2/uke2.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke3/uke3.iml" filepath="$PROJECT_DIR$/uke3/uke3.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke4/uke4.iml" filepath="$PROJECT_DIR$/uke4/uke4.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke5/uke5.iml" filepath="$PROJECT_DIR$/uke5/uke5.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke6/uke6.iml" filepath="$PROJECT_DIR$/uke6/uke6.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke7/uke7.iml" filepath="$PROJECT_DIR$/uke7/uke7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke7/F11 - Intro til rekursjon/F11 - Intro til rekursjon.iml" filepath="$PROJECT_DIR$/uke7/F11 - Intro til rekursjon/F11 - Intro til rekursjon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke7/F12 - Problemløsing med rekursjon/F12 - Problemløsing med rekursjon.iml" filepath="$PROJECT_DIR$/uke7/F12 - Problemløsing med rekursjon/F12 - Problemløsing med rekursjon.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke8/uke8.iml" filepath="$PROJECT_DIR$/uke8/uke8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke8/F13 - Sortering - del 1/F13 - Sortering - del 1.iml" filepath="$PROJECT_DIR$/uke8/F13 - Sortering - del 1/F13 - Sortering - del 1.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke9/uke9.iml" filepath="$PROJECT_DIR$/uke9/uke9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke9/F14 - Sortering - del 2/F14 - Sortering - del 2.iml" filepath="$PROJECT_DIR$/uke9/F14 - Sortering - del 2/F14 - Sortering - del 2.iml" />
     </modules>
   </component>
 </project>
