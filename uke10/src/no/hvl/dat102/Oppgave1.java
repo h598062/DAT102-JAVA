@@ -2,6 +2,7 @@ package no.hvl.dat102;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Oppgave1 {
@@ -12,9 +13,15 @@ public class Oppgave1 {
 
 		long gjennomsnitt1 = sorterOgTaTid(gjIterasjoner, antallnumre, randomseeds, sortmetode.STANDARD);
 		System.out.println("Gjennomsnitt for standard metode: " + gjennomsnitt1 + "ms");
+		System.out.println();
 
 		long gjennomsnitt2 = sorterOgTaTid(gjIterasjoner, antallnumre, randomseeds, sortmetode.SNARVEI);
 		System.out.println("Gjennomsnitt for snarvei metode: " + gjennomsnitt2 + "ms");
+		System.out.println();
+
+		long gjennomsnitt3 = sorterOgTaTid(gjIterasjoner, antallnumre, randomseeds, sortmetode.DOBBEL);
+		System.out.println("Gjennomsnitt for dobbel metode: " + gjennomsnitt3 + "ms");
+
 		// vi har observert at metoden med å finne minst og sette den på posisjon 0 er raskere enn den vanlige metoden
 	}
 
@@ -22,8 +29,9 @@ public class Oppgave1 {
 	 * Hjeplemetode for snarvei sortering fra oppgave a.<br>
 	 * Denne vil starte ved n-te element og jobbe seg framover i tabellen,
 	 * og bytte posisjon på minste element og første element
-	 * @param a Tabellen som skal jobbes med
-	 * @param n Hvor mange elementer som skal tas med ved sortering i tabellen
+	 *
+	 * @param a   Tabellen som skal jobbes med
+	 * @param n   Hvor mange elementer som skal tas med ved sortering i tabellen
 	 * @param <T> Hvilken som helst type element som utvider Comparable klassen
 	 */
 	private static <T extends Comparable<? super T>> void flyttMinsteFoerst(T[] a, int n) {
@@ -43,8 +51,9 @@ public class Oppgave1 {
 	/**
 	 * Flytter minste element i tabellen til indeks 0, deretter gjør en sortering<br>
 	 * Oppgave a
-	 * @param a Tabellen som skal jobbes med
-	 * @param n Hvor mange elementer som skal tas med ved sortering i tabellen
+	 *
+	 * @param a   Tabellen som skal jobbes med
+	 * @param n   Hvor mange elementer som skal tas med ved sortering i tabellen
 	 * @param <T> Hvilken som helst type element som utvider Comparable klassen
 	 */
 	public static <T extends Comparable<? super T>> void sorteringMedSnarvei(T[] a, int n) {
@@ -55,18 +64,113 @@ public class Oppgave1 {
 	/**
 	 * Omskrevet versjon av sortering med innsetting som flytter 2 elementer om gangen.<br>
 	 * Oppgave b
+	 *
 	 * @param a Tabellen som skal jobbes med
 	 * @param n Hvor mange elementer som skal tas med ved sortering i tabellen
 	 */
-	private static void sorteringMedDobbel(Integer[] a, int n) {
-		// TODO Gjøre oppgave b
+	private static <T extends Comparable<? super T>> void sorteringMedDobbel(T[] a, int n) {
+		// flyttMinsteFoerst(a, n); // vi må sørge for at minste element er først
+		sorteringMedDobbel(a, 0, n - 1);
+	}
+
+	/**
+	 * Omskrevet versjon av sortering med innsetting som flytter 2 elementer om gangen.<br>
+	 * Oppgave b
+	 *
+	 * @param a     Tabellen som skal jobbes med
+	 * @param start Hvor sorteringen starter
+	 * @param slutt Hvor sorteringen slutter
+	 * @param <T>   Hvilken som helst type element som utvider Comparable klassen
+	 */
+	public static <T extends Comparable<? super T>> void sorteringMedDobbel(T[] a, int start, int slutt) {
+		/*
+		Modifiser koden slik at i stedet for å sette inn ett element om gangen, setter vi inn to.
+		Så lenge det største elementet er mindre enn elementet vi sammenligner med i sortert del, så
+		kan vi flytte elementet to plasser til høyre.
+		Når vi finner rett plass for største, forsetter vi som vanlig med å sette inn det minste.
+		Kombiner med å flytte minste elementet først (som i a) før sorteringen starter.
+		Pass på at metoden fungerer for både odde og jevne n.
+		Skriv kort hva dere observerer.
+		*/
+
+		boolean huskSiste = false;
+
+		if (slutt % 2 == 1) {
+			huskSiste = true;
+		}
+
+		for (int i = start + 2; i <= slutt; i += 2) {
+			T   tmin = a[i];
+			T   tmax = a[i - 1];
+			int j    = i - 2;  // siste i sortert del
+
+			boolean ferdig1 = false;
+			boolean ferdig2 = false;
+
+			// sørge for at tmin holder den minste verdien
+			if (tmin.compareTo(tmax) > 0) {
+				T tmp = tmin;
+				tmin = tmax;
+				tmax = tmp;
+			}
+			int pos = j;
+			while (!ferdig1 && j >= 0) {
+				if (tmax.compareTo(a[j]) < 0) {
+					a[j + 2] = a[j];
+					j--;
+					pos = j;
+				} else if (tmin.compareTo(a[j]) < 0) {
+					ferdig2  = true;
+					a[j + 1] = a[j];
+					j--;
+				} else {
+					ferdig1 = true;
+				}
+			}
+			a[j + 1] = tmin;
+			if (ferdig2) {
+				a[pos + 2] = tmax;
+			} else {
+				a[j + 2] = tmax;
+			}
+
+			/* håndtering for hvis tabell er partall lang
+			når tabellen er partall lang vil vi hoppe over siste tall
+			f.eks:
+			lengde = 10
+			siste for løkke loop:
+			i == 9
+			i+=2
+			i==11
+			11 > 10, blir ikkje kjørt noe mer kode i for løkke
+			posisjon 10 blir aldri gjort noe med
+			 */
+
+			if (huskSiste && i == slutt - 1) {
+				i++;
+				T   tmp = a[i];
+				j   = i - 1;  // siste i sortert del
+
+				boolean ferdig = false;
+				while (!ferdig && j >= 0) {
+					if (tmp.compareTo(a[j]) < 0) {
+						a[j + 1] = a[j];
+						j--;
+					} else {
+						ferdig = true;
+					}
+				}
+				a[j + 1] = tmp;
+			}
+		}
+
 	}
 
 	/**
 	 * Sortering ved innsetting (Insertion sort)
 	 *
-	 * @param a Tabellen som skal jobbes med
-	 * @param n Hvor mange elementer som skal tas med ved sortering i tabellen
+	 * @param a   Tabellen som skal jobbes med
+	 * @param n   Hvor mange elementer som skal tas med ved sortering i tabellen
 	 * @param <T> Hvilken som helst type element som utvider Comparable klassen
 	 */
 	public static <T extends Comparable<? super T>> void sorteringVedInssetting(T[] a, int n) {
@@ -76,17 +180,17 @@ public class Oppgave1 {
 	/**
 	 * Sorterer ein del av tabellen, start ... slutt (begge grensene er med)
 	 *
-	 * @param a Tabellen som skal jobbes med
+	 * @param a     Tabellen som skal jobbes med
 	 * @param start Hvor sorteringen starter
 	 * @param slutt Hvor sorteringen slutter
-	 * @param <T> Hvilken som helst type element som utvider Comparable klassen
+	 * @param <T>   Hvilken som helst type element som utvider Comparable klassen
 	 */
 	public static <T extends Comparable<? super T>> void sorteringVedInssetting(T[] a, int start, int slutt) {
 		for (int i = start + 1; i <= slutt; i++) {
-			T       tmp    = a[i];
-			int     j      = i - 1;  // siste i sortert del
-			boolean ferdig = false;
+			T   tmp = a[i];
+			int j   = i - 1;  // siste i sortert del
 
+			boolean ferdig = false;
 			while (!ferdig && j >= 0) {
 				if (tmp.compareTo(a[j]) < 0) {
 					a[j + 1] = a[j];
@@ -101,7 +205,8 @@ public class Oppgave1 {
 
 	/**
 	 * Hjelpemetode for å opprette en tabell med tilfeldige tall i tilfeldig rekkefølge
-	 * @param antall Hvor mange tilfeldige tall som skal genereres
+	 *
+	 * @param antall     Hvor mange tilfeldige tall som skal genereres
 	 * @param randomseed Hvilken randomseed som skal brukes ved generering av tilfeldige tall
 	 *
 	 * @return En tabell med (antall) tilfeldige tall i tilfeldig rekkefølge
@@ -125,10 +230,11 @@ public class Oppgave1 {
 
 	/**
 	 * Kjører valgt sorteringsmetode (iterasjoner) antall ganger over tabeller tilfedig generert av spesifiserte randomseeds
+	 *
 	 * @param iterasjoner Hvor mange ganger sortering skal gjøres for å regne gjennomsnitt
 	 * @param antallnumre Hvor mange numre tabell som skal sorteres skal inneholde
 	 * @param randomseeds Hvilke randomseeds som skal brukes. Denne tabellen må inneholde minst like mange seeds som det er iterasjoner.
-	 * @param sm Hvilken sorteringsmetode som skal brukes
+	 * @param sm          Hvilken sorteringsmetode som skal brukes
 	 *
 	 * @return Tiden det tok å kjøre (iterasjoner) antall ganger av valgt sorteringsmetode på tabell av størrelse (antallnumre)
 	 */
@@ -138,7 +244,7 @@ public class Oppgave1 {
 		System.out.print("Tider: ");
 		for (int i = 0; i < iterasjoner; i++) {
 			Integer[] tabell = settOppTabell(antallnumre, randomseeds[i]);
-
+			// System.out.println(Arrays.toString(tabell));
 			Instant start = Instant.now();
 			switch (sm) {
 				case STANDARD -> sorteringVedInssetting(tabell, tabell.length);
@@ -151,6 +257,7 @@ public class Oppgave1 {
 
 			totalTid += tid;
 			System.out.print(tid + "ms, ");
+			// System.out.println(Arrays.toString(tabell));
 		}
 		System.out.println();
 		return totalTid / iterasjoner;
