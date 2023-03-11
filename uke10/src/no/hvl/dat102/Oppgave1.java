@@ -9,7 +9,13 @@ public class Oppgave1 {
 	public static void main(String[] args) {
 		int   gjIterasjoner = 5;
 		int   antallnumre   = 50000;
-		int[] randomseeds   = {12345, 67890, 13579, 24680, 69420};
+		//int[] randomseeds   = {12345, 67890, 13579, 24680, 69420};
+		int[] randomseeds = new int[gjIterasjoner];
+
+		for (int i = 0; i < gjIterasjoner; i++) {
+			Random r = new Random();
+			randomseeds[i] = r.nextInt(10000);
+		}
 
 		long gjennomsnitt1 = sorterOgTaTid(gjIterasjoner, antallnumre, randomseeds, sortmetode.STANDARD);
 		System.out.println("Gjennomsnitt for standard metode: " + gjennomsnitt1 + "ms");
@@ -23,6 +29,9 @@ public class Oppgave1 {
 		System.out.println("Gjennomsnitt for dobbel metode: " + gjennomsnitt3 + "ms");
 
 		// vi har observert at metoden med å finne minst og sette den på posisjon 0 er raskere enn den vanlige metoden
+
+		// metoden med å flytte dobbel er noen ganger raskest, noen ganger nest raskest, og noen ganger treigest.
+		// ved noen tilfeller er den MYE raskere, opptil rundt 30% kortere tid enn snarvei metode, men andre ganger er den 30% treigere.
 	}
 
 	/**
@@ -69,7 +78,7 @@ public class Oppgave1 {
 	 * @param n Hvor mange elementer som skal tas med ved sortering i tabellen
 	 */
 	private static <T extends Comparable<? super T>> void sorteringMedDobbel(T[] a, int n) {
-		// flyttMinsteFoerst(a, n); // vi må sørge for at minste element er først
+		// flyttMinsteFoerst(a, n);
 		sorteringMedDobbel(a, 0, n - 1);
 	}
 
@@ -104,8 +113,8 @@ public class Oppgave1 {
 			T   tmax = a[i - 1];
 			int j    = i - 2;  // siste i sortert del
 
-			boolean ferdig1 = false;
-			boolean ferdig2 = false;
+			boolean funnetMinPos = false;
+			boolean funnetMaxPos = false;
 
 			// sørge for at tmin holder den minste verdien
 			if (tmin.compareTo(tmax) > 0) {
@@ -114,21 +123,21 @@ public class Oppgave1 {
 				tmax = tmp;
 			}
 			int pos = j;
-			while (!ferdig1 && j >= 0) {
-				if (tmax.compareTo(a[j]) < 0) {
+			while (!funnetMinPos && j >= 0) {
+				if (!funnetMaxPos && tmax.compareTo(a[j]) < 0) {
 					a[j + 2] = a[j];
 					j--;
 					pos = j;
 				} else if (tmin.compareTo(a[j]) < 0) {
-					ferdig2  = true;
-					a[j + 1] = a[j];
+					funnetMaxPos = true;
+					a[j + 1]     = a[j];
 					j--;
 				} else {
-					ferdig1 = true;
+					funnetMinPos = true;
 				}
 			}
 			a[j + 1] = tmin;
-			if (ferdig2) {
+			if (funnetMaxPos) {
 				a[pos + 2] = tmax;
 			} else {
 				a[j + 2] = tmax;
@@ -145,11 +154,10 @@ public class Oppgave1 {
 			11 > 10, blir ikkje kjørt noe mer kode i for løkke
 			posisjon 10 blir aldri gjort noe med
 			 */
-
 			if (huskSiste && i == slutt - 1) {
-				i++;
-				T   tmp = a[i];
-				j   = i - 1;  // siste i sortert del
+				int x = i +1;
+				T tmp = a[x];
+				j = x - 1;  // siste i sortert del
 
 				boolean ferdig = false;
 				while (!ferdig && j >= 0) {
