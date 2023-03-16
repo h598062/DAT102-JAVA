@@ -20,8 +20,8 @@ public class Oppgave1 {
 		for (int i = 0; i < antallTall; i++) {
 			int x = r.nextInt(1000);
 			uordnet[i] = x;
-			ordnet[i] = x;
-			siste = x;
+			ordnet[i]  = x;
+			             siste = x;
 		}
 		Arrays.sort(ordnet);
 		System.out.println(Arrays.toString(ordnet));

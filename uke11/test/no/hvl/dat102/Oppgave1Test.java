@@ -59,4 +59,16 @@ class Oppgave1Test {
 			Oppgave1.binearSoek(null, 3);
 		});
 	}
+
+	@Test
+	void testLinearSoekMotTomTabell() {
+		int[] a = {};
+		Assertions.assertFalse(Oppgave1.linearSoek(a, 1));
+	}
+	@Test
+	void testBinearSoekMotTomTabell() {
+		int[] a = {};
+		Assertions.assertFalse(Oppgave1.binearSoek(a, 1));
+	}
+
 }
