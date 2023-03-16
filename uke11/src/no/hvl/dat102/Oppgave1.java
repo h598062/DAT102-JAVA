@@ -1,7 +1,5 @@
 package no.hvl.dat102;
 
-import no.hvl.dat102.tabell.TabellOrdnetListe;
-
 import java.util.Arrays;
 import java.util.Random;
 
@@ -28,10 +26,13 @@ public class Oppgave1 {
 		Arrays.sort(ordnet);
 		System.out.println(Arrays.toString(ordnet));
 		System.out.println(siste);
-		System.out.println(binaerSoek(ordnet, siste));
+		System.out.println(binearSoek(ordnet, siste));
 	}
 
 	public static boolean linearSoek(int[] a, int x) {
+		if (a == null) {
+			throw new NullPointerException("Søketabell kan ikke være null");
+		}
 		for (int i : a) {
 			if (i == x) {
 				return true;
@@ -40,11 +41,14 @@ public class Oppgave1 {
 		return false;
 	}
 
-	public static boolean binaerSoek(int[] a, int x) {
-		return binaerSoek(a, x, 0, a.length - 1);
+	public static boolean binearSoek(int[] a, int x) {
+		if (a == null) {
+			throw new NullPointerException("Søketabell kan ikke være null");
+		}
+		return binearSoek(a, x, 0, a.length - 1);
 	}
 
-	public static boolean binaerSoek(int[] a, int x, int startpos, int sluttpos) {
+	private static boolean binearSoek(int[] a, int x, int startpos, int sluttpos) {
 		int     midtpunkt = (sluttpos + startpos) / 2;
 		boolean svar      = false;
 		if (sluttpos < startpos) {
@@ -53,9 +57,9 @@ public class Oppgave1 {
 		if (x == a[midtpunkt]) {
 			svar = true;
 		} else if (x < a[midtpunkt]) {
-			svar = binaerSoek(a, x, startpos, midtpunkt - 1);
+			svar = binearSoek(a, x, startpos, midtpunkt - 1);
 		} else {
-			svar = binaerSoek(a, x, midtpunkt + 1, sluttpos);
+			svar = binearSoek(a, x, midtpunkt + 1, sluttpos);
 		}
 
 		return svar;
