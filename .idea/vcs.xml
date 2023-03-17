@@ -11,6 +11,5 @@
     <mapping directory="$PROJECT_DIR$/../dat102" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../dat102-oblig1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../dat102-oblig2" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../dat107-v2023" vcs="Git" />
   </component>
 </project>
