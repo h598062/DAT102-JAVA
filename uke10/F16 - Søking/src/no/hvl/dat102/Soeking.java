@@ -40,9 +40,13 @@ public class Soeking {
 		 * nødvendig når vi søker i usortert tabell sidan vi då brukar equals.
 		 */
 
-		// fyll inn
-		
-		return false;
+		int i = 0;
+
+		while (i < a.length && element.compareTo(a[i]) > 0) { // NB rekkefølga er viktig
+			i++;
+		}
+
+		return i < a.length && element.equals(a[i]);
 	}
 
 	/** Søker i sortert kjede. */
