@@ -4,25 +4,31 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Bag/Bag.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Bag/Bag.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Bag2/Bag2.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Bag2/Bag2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/DAT102-HVL-OPPGAVER-EKSEMPLER.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/DAT102-HVL-OPPGAVER-EKSEMPLER.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/DAT102-Oblig1.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/DAT102-Oblig1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dat102-oblig2/DAT102-Oblig2.iml" filepath="$PROJECT_DIR$/../dat102-oblig2/DAT102-Oblig2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/DobbelKjedetListeU/DobbelKjedetListeU.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/DobbelKjedetListeU/DobbelKjedetListeU.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/EnumArbeidsdag/EnumArbeidsdag.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/EnumArbeidsdag/EnumArbeidsdag.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/EnumSjanger/EnumSjanger.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/EnumSjanger/EnumSjanger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke7/F11 - Intro til rekursjon/F11 - Intro til rekursjon.iml" filepath="$PROJECT_DIR$/uke7/F11 - Intro til rekursjon/F11 - Intro til rekursjon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke7/F12 - Problemløsing med rekursjon/F12 - Problemløsing med rekursjon.iml" filepath="$PROJECT_DIR$/uke7/F12 - Problemløsing med rekursjon/F12 - Problemløsing med rekursjon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke8/F13 - Sortering - del 1/F13 - Sortering - del 1.iml" filepath="$PROJECT_DIR$/uke8/F13 - Sortering - del 1/F13 - Sortering - del 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke9/F14 - Sortering - del 2/F14 - Sortering - del 2.iml" filepath="$PROJECT_DIR$/uke9/F14 - Sortering - del 2/F14 - Sortering - del 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke10/F15 - Rekursiv Fletting/F15 - Rekursiv Fletting.iml" filepath="$PROJECT_DIR$/uke10/F15 - Rekursiv Fletting/F15 - Rekursiv Fletting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke10/F16 - Søking/F16 - Søking.iml" filepath="$PROJECT_DIR$/uke10/F16 - Søking/F16 - Søking.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Generisk/Generisk.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Generisk/Generisk.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Kalkulator/Kalkulator.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Kalkulator/Kalkulator.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Karakter/Karakter.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Karakter/Karakter.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/KoeT/KoeT.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/KoeT/KoeT.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/LabyrintUtenRekursjon/LabyrintUtenRekursjon.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/LabyrintUtenRekursjon/LabyrintUtenRekursjon.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/ListeOrdnetU/ListeOrdnetU.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/ListeOrdnetU/ListeOrdnetU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MAT104/java/MAT104.iml" filepath="$PROJECT_DIR$/../MAT104/java/MAT104.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/MengdeU/MengdeU.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/MengdeU/MengdeU.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/SorteringOgSoekingFyllUt/SorteringOgSoekingFyllUt.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/SorteringOgSoekingFyllUt/SorteringOgSoekingFyllUt.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/SorteringOgSokingU/SorteringOgSokingU.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/SorteringOgSokingU/SorteringOgSokingU.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Stabel/Stabel.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Stabel/Stabel.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/TabelHaugU/TabelHaugU.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/TabelHaugU/TabelHaugU.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/DAT102-HVL-OPPGAVER-EKSEMPLER.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/DAT102-HVL-OPPGAVER-EKSEMPLER.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../MAT104/java/MAT104.iml" filepath="$PROJECT_DIR$/../MAT104/java/MAT104.iml" />
       <module fileurl="file://$PROJECT_DIR$/graphics2d-test/graphics2d-test.iml" filepath="$PROJECT_DIR$/graphics2d-test/graphics2d-test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/DAT102-Oblig1.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/DAT102-Oblig1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../dat102-oblig2/DAT102-Oblig2.iml" filepath="$PROJECT_DIR$/../dat102-oblig2/DAT102-Oblig2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg1/oblig1-oppg1.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg1/oblig1-oppg1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg2/oblig1-oppg2.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg2/oblig1-oppg2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg3/oblig1-oppg3.iml" filepath="$PROJECT_DIR$/../dat102-oblig1/oblig1-oppg3/oblig1-oppg3.iml" />
@@ -34,21 +40,16 @@
       <module fileurl="file://$PROJECT_DIR$/../dat102-oblig2/oblig2-oppg5/oblig2-oppg5.iml" filepath="$PROJECT_DIR$/../dat102-oblig2/oblig2-oppg5/oblig2-oppg5.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dat102-oblig2/oblig2-oppg6/oblig2-oppg6.iml" filepath="$PROJECT_DIR$/../dat102-oblig2/oblig2-oppg6/oblig2-oppg6.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke10/uke10.iml" filepath="$PROJECT_DIR$/uke10/uke10.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uke10/F15 - Rekursiv Fletting/F15 - Rekursiv Fletting.iml" filepath="$PROJECT_DIR$/uke10/F15 - Rekursiv Fletting/F15 - Rekursiv Fletting.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uke10/F16 - Søking/F16 - Søking.iml" filepath="$PROJECT_DIR$/uke10/F16 - Søking/F16 - Søking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke11/uke11.iml" filepath="$PROJECT_DIR$/uke11/uke11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uke12/uke12.iml" filepath="$PROJECT_DIR$/uke12/uke12.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke2/uke2.iml" filepath="$PROJECT_DIR$/uke2/uke2.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke3/uke3.iml" filepath="$PROJECT_DIR$/uke3/uke3.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke4/uke4.iml" filepath="$PROJECT_DIR$/uke4/uke4.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke5/uke5.iml" filepath="$PROJECT_DIR$/uke5/uke5.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke6/uke6.iml" filepath="$PROJECT_DIR$/uke6/uke6.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke7/uke7.iml" filepath="$PROJECT_DIR$/uke7/uke7.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uke7/F11 - Intro til rekursjon/F11 - Intro til rekursjon.iml" filepath="$PROJECT_DIR$/uke7/F11 - Intro til rekursjon/F11 - Intro til rekursjon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uke7/F12 - Problemløsing med rekursjon/F12 - Problemløsing med rekursjon.iml" filepath="$PROJECT_DIR$/uke7/F12 - Problemløsing med rekursjon/F12 - Problemløsing med rekursjon.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke8/uke8.iml" filepath="$PROJECT_DIR$/uke8/uke8.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uke8/F13 - Sortering - del 1/F13 - Sortering - del 1.iml" filepath="$PROJECT_DIR$/uke8/F13 - Sortering - del 1/F13 - Sortering - del 1.iml" />
       <module fileurl="file://$PROJECT_DIR$/uke9/uke9.iml" filepath="$PROJECT_DIR$/uke9/uke9.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uke9/F14 - Sortering - del 2/F14 - Sortering - del 2.iml" filepath="$PROJECT_DIR$/uke9/F14 - Sortering - del 2/F14 - Sortering - del 2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uke11/uke11.iml" filepath="$PROJECT_DIR$/uke11/uke11.iml" />
     </modules>
   </component>
 </project>
