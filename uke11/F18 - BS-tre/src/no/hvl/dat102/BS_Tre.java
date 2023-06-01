@@ -1,6 +1,8 @@
 package no.hvl.dat102;
 
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BS_Tre<T extends Comparable<? super T>> implements SoektreInterface<T> {
 
@@ -17,7 +19,7 @@ public class BS_Tre<T extends Comparable<? super T>> implements SoektreInterface
 	}
 
 	public int finnHoyde() {
-		int sum = -1;
+		int              sum  = -1;
 		BinaerTreNode<T> node = rot;
 		if (node == null) {
 			return sum;
@@ -30,19 +32,19 @@ public class BS_Tre<T extends Comparable<? super T>> implements SoektreInterface
 		if (node == null) {
 			return 0;
 		}
-		int sum = 1;
-		BinaerTreNode<T> v = node.getVenstre();
-		boolean fantbarn = false;
-		int vh = 0;
-		int hh = 0;
+		int              sum      = 1;
+		BinaerTreNode<T> v        = node.getVenstre();
+		boolean          fantbarn = false;
+		int              vh       = 0;
+		int              hh       = 0;
 		if (v != null) {
-			vh = finnHoyde(v);
+			vh       = finnHoyde(v);
 			fantbarn = true;
 		}
 
 		BinaerTreNode<T> h = node.getHogre();
 		if (h != null) {
-			hh = finnHoyde(h);
+			hh       = finnHoyde(h);
 			fantbarn = true;
 		}
 		if (fantbarn) {
@@ -167,5 +169,43 @@ public class BS_Tre<T extends Comparable<? super T>> implements SoektreInterface
 	public Iterator<T> getInordenIterator() {
 		return null;
 	}
+
+	public int antallBlad() {
+		return antallBladRek(rot);
+	}
+
+	private int antallBladRek(BinaerTreNode<T> p) {
+		if (p == null) {
+			return 0;
+		}
+		int blad = 0;
+		blad += antallBladRek(p.getVenstre());
+		blad += antallBladRek(p.getHogre());
+		if (blad == 0) {
+			// denne er et blad
+			blad++;
+		}
+		return blad;
+	}
+
+	private void skrivUtMedLinjer(BinaerTreNode<T> node, String prefiks, boolean erSiste) {
+		if (node == null) {
+			return;
+		}
+
+		System.out.print(prefiks);
+		System.out.print(erSiste ? "└── " : "├── ");
+		System.out.println(node.getElement());
+
+		String nyttPrefiks = prefiks + (erSiste ? "    " : "│   ");
+
+		skrivUtMedLinjer(node.getVenstre(), nyttPrefiks, node.getHogre() == null);
+		skrivUtMedLinjer(node.getHogre(), nyttPrefiks, true);
+	}
+
+	public void skrivUtMedLinjer() {
+		skrivUtMedLinjer(rot, "", true);
+	}
+
 
 }
