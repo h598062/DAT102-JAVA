@@ -9,7 +9,7 @@ public class KjedetBSTre<T extends Comparable<T>> implements BSTreADT<T> {
     public T finnMinste() {
         BinaerTreNode<T> n = rot;
         while(n.getVenstre() != null) {
-        	n = n.getVenstre();
+            n = n.getVenstre();
         }
         return n.getElement();
     }
@@ -17,17 +17,17 @@ public class KjedetBSTre<T extends Comparable<T>> implements BSTreADT<T> {
         return antallBladRek(rot);
     }
     private int antallBladRek(BinaerTreNode<T> p) {
-		if (p == null) {
-			return 0;
-		}
-		int blad = 0;
-		blad += antallBladRek(p.getVenstre());
-		blad += antallBladRek(p.getHogre());
-		if (blad == 0) {
-			// denne er et blad
-			blad++;
-		}
-		return blad;
-	}
+        if (p == null) {
+            return 0;
+        }
+        int blad = 0;
+        blad += antallBladRek(p.getVenstre());
+        blad += antallBladRek(p.getHogre());
+        if (blad == 0) {
+            // denne er et blad
+            blad++;
+        }
+        return blad;
+    }
     // … andre metoder
 }

@@ -207,5 +207,65 @@ public class BS_Tre<T extends Comparable<? super T>> implements SoektreInterface
 		skrivUtMedLinjer(rot, "", true);
 	}
 
+	public int hoyde() {
+		int resultat = -1;
+
+		resultat = hoydeRek(rot);
+
+		return resultat;
+	}
+
+	private int hoydeRek(BinaerTreNode<T> p) {
+		BinaerTreNode<T> vb = p.getVenstre();
+		BinaerTreNode<T> hb = p.getHogre();
+		int              vh = 0;
+		int              hh = 0;
+		if (vb != null) {
+			vh++;
+			vh += hoydeRek(vb);
+		}
+		if (hb != null) {
+			hh++;
+			hh += hoydeRek(hb);
+		}
+		return Math.max(vh, hh);
+	}
+
+	public int hoydeCBT() {
+		return hoydeRekCBT(rot);
+	}
+
+	private int hoydeRekCBT(BinaerTreNode<T> p) {
+		if (p == null) {
+			// Høyden til et tomt tre er -1
+			return -1;
+		} else {
+			// Finner høyden til venstre og høyre undertrær
+			int hoydeVenstre = hoydeRek(p.getVenstre());
+			int hoydeHoyre   = hoydeRek(p.getHogre());
+
+			// Returnerer den største høyden, pluss 1 for å inkludere rotnoden
+			return Math.max(hoydeVenstre, hoydeHoyre) + 1;
+		}
+	}
+
+	public int hoydeFasit() {
+		return hoydeRekFasit(rot);
+	}
+
+	private int hoydeRekFasit(BinaerTreNode<T> p) {
+		int resultat = -1;
+		if (p != null) {
+			int venstreHoyde = hoydeRek(p.getVenstre());
+			int hoyreHoyde   = hoydeRek(p.getHogre());
+			if (venstreHoyde > hoyreHoyde) {
+				resultat = 1 + venstreHoyde;
+			} else {
+				resultat = 1 + hoyreHoyde;
+			}
+			// alt: resultat = Math.max(venstreHoyde, hoyreHoyde) + 1;
+		}
+		return resultat;
+	}
 
 }

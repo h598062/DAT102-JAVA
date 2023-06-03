@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/eksamen/eksamen.iml" filepath="$PROJECT_DIR$/eksamen/eksamen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eksamen/2018/2018.iml" filepath="$PROJECT_DIR$/eksamen/2018/2018.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eksamen/2021v/2021v.iml" filepath="$PROJECT_DIR$/eksamen/2021v/2021v.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Bag/Bag.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Bag/Bag.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Bag2/Bag2.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/Bag2/Bag2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/DAT102-HVL-OPPGAVER-EKSEMPLER.iml" filepath="$PROJECT_DIR$/../DAT102-HVL-OPPGAVER-EKSEMPLER/DAT102-HVL-OPPGAVER-EKSEMPLER.iml" />
