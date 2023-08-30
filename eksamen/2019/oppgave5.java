@@ -19,6 +19,18 @@ public class KjedetOrdnetListe<T extends Comparable<T>> implements OrdnetListeAD
         return antMindre;
     }
     public void fjernDuplikater() {
-        
+        if (foerste == null) {
+            return;
+        }
+        LinearNode<T> denne = foerste;
+        LinearNode<T> neste = foerste.getNeste();
+        while(denne != null) {
+            while(neste != null && denne.getElement().equals(neste.getElement())) {
+                neste = neste.getNeste();
+                antall--;
+            }
+            denne.setNeste(neste);
+            denne = denne.getNeste();
+        }
     }
 }
